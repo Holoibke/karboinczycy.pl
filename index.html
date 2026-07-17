@@ -120,6 +120,34 @@
   .keywordspam {
     display: none;
   }
+    :root {
+    --img-w: 140px;
+    --img-h: 100px;
+  }
+  .site-img {
+    width: var(--img-w);
+    height: var(--img-h);
+    object-fit: cover;       /* przycina, nie rozciąga */
+    object-position: center;
+    display: inline-block;
+    border: 3px solid #FFCC00;
+    margin: 4px;
+    vertical-align: middle;
+    background: #222;        /* widoczne, gdy zdjęcie się ładuje */
+    filter: sepia(20%) contrast(105%); /* lekki "stary internet" sztych, usuń jeśli nie chcesz */
+  }
+  /* Wariant pionowy / portretowy, np. dla postaci */
+  .site-img.tall {
+    height: 180px;
+  }
+  /* Wariant duży, np. na zdjęcie "hero" na górze sekcji */
+  .site-img.big {
+    width: 260px;
+    height: 180px;
+  }
+
+
+  
 </style>
 </head>
 <body>
@@ -145,8 +173,8 @@
   <br>
   <span class="counter">ODWIEDZIN: 676767</span>
   <br><br>
-  <div>zdjęcie: jezioro<br>(w górach)</div>
-  <div class="placeholder-img"><img src=ursach.png width='140' height='100'></div>
+  <div class="site-img">zdjęcie: jezioro<br>(w górach)</div>
+  <div class="site-img"><img src=ursach.png></div>
 </td>
 
 <td class="main">
@@ -166,7 +194,7 @@ Powód był prosty - nie mogła istnieć grupa wolnych ludzi, w już zniewolonym
 
 <h2>W przygotowaniu</h2>
 <p><i>Currently under preparation. Prace trwają od 47 lat, tak jak panowanie Uršaha.</i></p>
-<div class="placeholder-img">okładka:<br>"Ziemia Karboiń&shy;czyków"</div>
+<div class="site-img tall"><img src=OMAGAAH.png></div>
 <p>Pierwsza kompletna historia górskiego ludu, ze spisem klanów i herbarzem tamg, do nabycia we wszystkich księgarniach, które zgodziły się ją przyjąć pod przymusem towarzyskim.</p>
 
 <h2>HISTORIA GÓR ANDUJSKICH</h2>
